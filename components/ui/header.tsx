@@ -8,9 +8,6 @@ export default function Header() {
   return (
     <div className="relative w-full h-0">
       <Navbar className="" />
-      <p className="text-black dark:text-white h-0">
-        The Navbar will show on top of the page
-      </p>
     </div>
   );
 }

@@ -174,7 +174,7 @@ export default function Owner() {
       .catch(function (error) {
         Notiflix.Report.failure(
           "Error",
-          "The Fact Checker backend is not up and running. To run it: `pnpm backend` and wait for the message `server started on port 3000`",
+          "The Truthify backend is not up and running. To run it: `pnpm backend` and wait for the message `server started on port 3000`",
           "Ok"
         );
       });
@@ -212,14 +212,7 @@ export default function Owner() {
   return (
     <div style={{ margin: 0, height: "100%" }}>
       {hospitalAccounts.length > 0 && researcherAccounts.length > 0 && (
-        <Card
-          style={{
-            margin: 40,
-            height: "90%",
-            backgroundColor: "#1E1E1E",
-            color: "#FFFFFF"
-          }}
-        >
+        <Card style={{ margin: 40, height: "90%" }}>
           <div
             style={{
               display: "flex",
@@ -241,19 +234,18 @@ export default function Owner() {
                 >
                   <Form.Item
                     label="Name"
-                    style={{ flex: 1}}
+                    style={{ flex: 1 }}
                     name={["default", "first"]}
-                    
                   >
-                    <Input style={{ color: "#FFFFFF" }} defaultValue={val["account_name"]} disabled={true} />
+                    <Input defaultValue={val["account_name"]} disabled={true} />
                   </Form.Item>
                   <Form.Item
                     label="Address"
                     name={["default", "address"]}
-                    style={{ flex: 1, color: "#FFFFFF" }}
+                    style={{ flex: 1 }}
                   >
                     <Input
-                      style={{ width: "100%", color: "#FFFFFF" }}
+                      style={{ width: "100%" }}
                       defaultValue={val.address}
                       disabled={true}
                     />
