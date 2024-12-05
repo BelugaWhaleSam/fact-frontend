@@ -5,6 +5,7 @@ import YouTube from "react-youtube";
 import Link from "next/link";
 import { Cover } from "@/components/ui/cover";
 import { BackgroundGradientAnimation } from "@/components/ui/background-gradient-animation";
+import { FlipWords } from "@/components/ui/flip-words";
 
 export default function Hero() {
   const videoOps = {
@@ -14,6 +15,7 @@ export default function Hero() {
       autoplay: 0,
     },
   };
+  const words = ["verifiable", "secure", "trustworthy", "private"];
 
   return (
     <section className="relative">
@@ -28,7 +30,7 @@ export default function Hero() {
                 On-Chain <br />
                 <Cover>Zero-Knowledge Proof Framework</Cover>
                 <br />
-                for Verifiable Fact-Checking
+                for <FlipWords words={words} />Fact-Checking
               </h1>
             </div>
             {/* Hero image */}

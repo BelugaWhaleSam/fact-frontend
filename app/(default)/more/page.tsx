@@ -16,8 +16,7 @@ export default function More() {
             {/* Page header */}
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-2xl md:text-2xl lg:text-4xl font-semibold max-w-7xl mx-auto text-center mt-6ls relative z-20 py-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-neutral-700 to-neutral-700 dark:from-neutral-800 dark:via-white dark:to-white">
-                Learn more about <br />
-                <Cover>Fact Checker</Cover>
+                Learn more about Fact Checker
               </h1>
             </div>
             <div

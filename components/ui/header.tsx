@@ -17,16 +17,19 @@ export default function Header() {
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
+
   return (
     <div
       className={cn("z-50", className)} // Adjusted width
     >
       <Menu setActive={setActive}>
-        <MenuItem setActive={setActive} active={active} item="Main Menu">
-          <div className="flex flex-col space-y-4 text-md">
-            <HoveredLink href="/">Home</HoveredLink>
-          </div>
-        </MenuItem>
+        <Link href="/" className="cursor-pointer mr-auto">
+          <MenuItem
+            setActive={setActive}
+            active={null}
+            item="Home"
+          ></MenuItem>
+        </Link>
         <MenuItem setActive={setActive} active={active} item="Demo">
           <div className="text-sm grid grid-cols-1 gap-10 p-4">
             <ProductItem

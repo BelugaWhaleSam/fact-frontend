@@ -28,7 +28,9 @@ export const MenuItem = ({
     <div onMouseEnter={() => setActive(item)} className="relative mr-auto">
       <motion.p
         transition={{ duration: 0.3 }}
-        className="cursor-pointer text-xl text-black hover:opacity-[0.9] dark:text-white"
+        // className=" text-xl text-black hover:opacity-[0.9] dark:text-white"
+        className="cursor-pointer text-2xl md:text-2xl font-extrabold leading-tighter tracking-tighter bg-clip-text text-transparent text-white"
+        data-aos="zoom-y-out"
       >
         {item}
       </motion.p>
@@ -91,7 +93,7 @@ export const Menu = ({
       initial={{ y: 0 }}
       animate={{ y: showNavbar ? 0 : "-100%" }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
-      className="top-0 left-0 right-0 z-50 relative border border-transparent dark:bg-black/50 backdrop-blur-sm shadow-input flex justify-center space-x-8 px-24 py-4"
+      className="top-0 left-0 right-0 z-50 relative border border-transparent dark:bg-black/50 backdrop-blur-sm shadow-input flex justify-center space-x-8 px-24 py-6"
     >
       {children}
     </motion.nav>

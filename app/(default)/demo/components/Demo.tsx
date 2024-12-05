@@ -2,6 +2,7 @@
 import { Button, Steps, theme, ConfigProvider } from "antd";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import styled from "styled-components";
 
 import Owner from "./Owner";
 import Hospital from "./Hospital";
@@ -13,6 +14,21 @@ export default function Demo() {
   const { token } = theme.useToken();
   const [current, setCurrent] = useState(0);
   const [server, setServer] = useState("");
+
+  const CustomSteps = styled.div`
+    .ant-steps-item-icon .ant-steps-icon {
+      color: orange !important;
+    }
+    .ant-steps-item-icon {
+      background-color: black !important;
+      border-color: orange !important;
+    }
+    
+    .ant-steps-item {
+      color: white !important;
+    }
+  `;
+
   const steps = [
     {
       title: <span style={{ color: "orange" }}>Authorize</span>,
@@ -75,11 +91,13 @@ export default function Demo() {
     <div>
       {server == "true" && (
         <div>
-          <Steps
-            current={current}
-            items={items}
-            style={{ margin: 25, width: "95%" }}
-          />
+          <CustomSteps>
+            <Steps
+              current={current}
+              items={items}
+              style={{ margin: 25, width: "95%" }}
+            />
+          </CustomSteps>
           <div style={contentStyle}>{steps[current].content}</div>
           <div style={{ margin: 20 }}>
             {current < steps.length - 1 && (

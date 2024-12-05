@@ -24,13 +24,13 @@ module.exports = {
       keyframes: {
         moveHorizontal: {
           "0%": {
-            transform: "translateX(-50%) translateY(-10%)",
+            transform: "translateX(-90%) translateY(-90%)",
           },
           "50%": {
-            transform: "translateX(50%) translateY(10%)",
+            transform: "translateX(90%) translateY(90%)",
           },
           "100%": {
-            transform: "translateX(-50%) translateY(-10%)",
+            transform: "translateX(-90%) translateY(-90%)",
           },
         },
         moveInCircle: {
@@ -46,13 +46,13 @@ module.exports = {
         },
         moveVertical: {
           "0%": {
-            transform: "translateY(-50%)",
+            transform: "translateY(-90%)",
           },
           "50%": {
-            transform: "translateY(50%)",
+            transform: "translateY(90%)",
           },
           "100%": {
-            transform: "translateY(-50%)",
+            transform: "translateY(-90%)",
           },
         },
       },
@@ -163,15 +163,15 @@ module.exports = {
       scale: {
         98: ".98",
       },
-      animation: {
-        float: "float 3s ease-in-out infinite",
-      },
-      keyframes: {
-        float: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-5%)" },
-        },
-      },
+      // animation: {
+      //   float: "float 3s ease-in-out infinite",
+      // },
+      // keyframes: {
+      //   float: {
+      //     "0%, 100%": { transform: "translateY(0)" },
+      //     "50%": { transform: "translateY(-5%)" },
+      //   },
+      // },
       zIndex: {
         "-1": "-1",
       },
