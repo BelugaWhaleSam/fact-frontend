@@ -29,7 +29,7 @@ export const MenuItem = ({
       <motion.p
         transition={{ duration: 0.3 }}
         // className=" text-xl text-black hover:opacity-[0.9] dark:text-white"
-        className="cursor-pointer text-2xl md:text-2xl font-extrabold leading-tighter tracking-tighter bg-clip-text text-transparent text-white"
+        className="cursor-pointer text-3xl md:text-3xl font-extrabold leading-tighter tracking-tighter bg-clip-text text-transparent text-white"
         data-aos="zoom-y-out"
       >
         {item}

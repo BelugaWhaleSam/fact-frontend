@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "../ui/navbar-menu";
 import { cn } from "../lib/utils";
+import { useAccount } from "wagmi"
 import Link from "next/link";
 
 export default function Header() {
@@ -14,6 +15,7 @@ export default function Header() {
 
 function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
+  const { isConnected } = useAccount();
 
   return (
     <div
@@ -27,6 +29,8 @@ function Navbar({ className }: { className?: string }) {
             item="Home"
           ></MenuItem>
         </Link>
+        <w3m-button/>
+        <w3m-network-button/>
         <MenuItem setActive={setActive} active={active} item="Demo">
           <div className="text-sm grid grid-cols-1 gap-10 p-4">
             <ProductItem
